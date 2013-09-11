@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  age: MyString
+  fluency: MyString
+  schooling: MyString
+  profession: MyString
+  interest: MyString
+  goals: MyText
+  writing_tasks: MyString
+  reading_topics: MyString
+  improve: MyText
+
+two:
+  age: MyString
+  fluency: MyString
+  schooling: MyString
+  profession: MyString
+  interest: MyString
+  goals: MyText
+  writing_tasks: MyString
+  reading_topics: MyString
+  improve: MyText

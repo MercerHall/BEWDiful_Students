@@ -1,0 +1,23 @@
+<h1>Welcome to our Writer's Conference!</h1>
+
+<%= form_for @diagnostic do |f| %>
+What's your answer for question 1?
+<%= f.label :answer1 %>
+<%= f.text_field :answer1 %><br />
+
+What's your answer for question 2?
+<%= f.label :answer2 %>
+<%= f.text_field :answer2 %><br />
+
+What's your answer for question 3?
+<%= f.label :answer3 %>
+<%= f.text_field :answer3 %><br />
+
+What's your answer for question 4?
+<%= f.label :answer4 %>
+<%= f.text_field :answer4 %><br />
+
+<%= f.submit "Go Wild!" %>
+
+<% end %>
+
