@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:confirmable
 	validates :email, :last_name, :first_name, presence: true
+	has_one :diagnostics
+	has_one :surveys
+	has_one :writer_types
+	# Do we need to include the above associations?
 end

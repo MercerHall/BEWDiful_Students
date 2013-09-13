@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  writer_type: MyString
+  description: MyText
+
+two:
+  writer_type: MyString
+  description: MyText

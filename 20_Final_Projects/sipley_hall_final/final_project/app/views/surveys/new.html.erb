@@ -1,0 +1,41 @@
+<h1>This is where our survey will go</h1>
+
+<%= form_for @survey do |f| %>
+What's your age?
+<%= f.label :age %>
+<%= f.text_field :age %><br />
+
+What's your fluency?
+<%= f.label :fluency %>
+<%= f.text_field :fluency %><br />
+
+What's your schooling?
+<%= f.label :schooling %>
+<%= f.text_field :schooling %><br />
+
+What's your profession?
+<%= f.label :profession %>
+<%= f.text_field :profession %><br />
+
+What's your interest?
+<%= f.label :interest %>
+<%= f.text_field :interest %><br />
+
+What's your goals?
+<%= f.label :goals %>
+<%= f.text_field :goals %><br />
+
+What's your writing tasks?
+<%= f.label :writing_tasks %>
+<%= f.text_field :writing_tasks %><br />
+
+What's your reading topics?
+<%= f.label :reading_topics %>
+<%= f.text_field :reading_topics %><br />
+
+What's your improve?
+<%= f.label :improve %>
+<%= f.text_field :improve %><br />
+
+<%= f.submit "Go Wild!" %>
+<% end %>
