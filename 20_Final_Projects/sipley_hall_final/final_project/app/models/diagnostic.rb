@@ -1,40 +1,60 @@
 class Diagnostic < ActiveRecord::Base
 	# validates 	:user_id, presence: true
-	belongs_to 	:users
+	belongs_to :users
 
-# points method(answer)
-# 	if answer = '1' then @point = 1.to_i
-# 	...
-# end
+	def points(choice)
+		if choice = '1' 
+			point == 1.to_i
+		elsif choice = '2' 
+			point == 2.to_i
+		elsif choice = '3' 
+			point == 3.to_i
+		elsif choice = '4' 
+			point == 4.to_i
+		else 
+			puts "You entered an incorrect response."
+			render 'new'
+		end
+	end
 
-# question1 method
-# 	points(answer1)
-# 	@point = @point1
-# end
+	def question1
+		points(:answer1)
+		point = @point1
+	end
 
-# question2 method
-# 	points(answer1)
-# 	@point = @point1
-# end
+	def question2
+		points(:answer2)
+		point = @point2
+	end
 
-# question3 method
-# 	points(answer1)
-# 	@point = @point1
-# end
+	def question3
+		points(:answer3)
+		point = @point3
+	end
 
-# question4 method
-# 	points(answer1)
-# 	@point = @point1
-# end
+	def question4
+		points(:answer4)
+		point = @point4
+	end
 
-# tally method
-# @tally = @point1 + @point2 + @point3 + @point4
-# end
+	def tally
+		@tally == (@point1 + @point2 + @point3 + @point4)
+	end
 
-# algorithm method
-# if .... writer_type = @Ricky
-# ...
-# end
+	def algorithm
+		if (@tally <= 6)
+			diagnostic(:writer_type => 'Ricky')
+		elsif (@tally >= 7) && (@tally <= 10)
+			diagnostic(:writer_type => 'Madison')
+		elsif (@tally >= 11) && (@tally <= 14)
+			diagnostic(:writer_type => 'Daniel')
+		elsif (@tally >= 15)
+			diagnostic(:writer_type => 'Theodora')			
+		else 
+			puts "There was an error in calculating your writer profile."
+			render 'new'
+		end
+	end
 
 end
 	# validates , presence: true

@@ -1,3 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+    header {
+      text-align: center;
+      background: url('http://img0.etsystatic.com/000/0/6473228/il_570xN.290018622.jpg');
+      background-size: cover;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+      font-family: helvetica;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0px auto;
+      font-family: helvetica;
+      color: #330033;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+      }
+      li {
+        display: block;
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/assets/jeff.png">
+    <h1>Tailor</h1>
+    <ul>
+      <li><a href="http://localhost:3000/pages/about">About</a></li>
+      <li><a href="http://localhost:3000/diagnostics/new">Diagnostic</a></li>
+      <li><a href="http://localhost:3000/surveys/new">Survey</a></li>
+    </ul>
+  </header>
 <p>Hello <%= @resource.email %>!</p>
 
 <p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>

@@ -1,23 +1,119 @@
-<h1>Welcome to our Writer's Conference!</h1>
+<link href="/normalize.css" rel="stylesheet">
+  <style>
+  h1{
+  	text-align: center;
+  }
+  .first {
+font-size: 20px
+  }
+  p{
+
+  }
+  article{
+text-indent:50px;
+  	}
+
+  </style>
+ 
+	<h1>Welcome to your first Writer's Conference</h1>
+
+	<br><b><span class="first">Directions: Read each question and type the letter of the answer in the answer field.</span></b><br><br> 
+
 
 <%= form_for @diagnostic do |f| %>
-What's your answer for question 1?
+<p>
+1) Which thesis statement do you like the best?
+<br>
+<br>
+<article>
+A) Fantasy football is a way for fans to create their own teams.</article>
+<br>
+<br><article>
+B) Fans create their own fantasy football teams because they want to make their own teams of players.</article>
+<br>
+<br><article>
+C) Although fantasy football is a growing trend, many believe that the practice obscures the power of great coaching.</article>
+<br>
+<br>
+<article>
+ D) Even though fantasy football is a popular pastime, its popularity will only continue to increase because fans enjoy the opportunity to create their own unique teams.</article>
+ </p> 
+<br>
+<article>
 <%= f.label :answer1 %>
-<%= f.text_field :answer1 %><br />
-
-What's your answer for question 2?
+<%= f.text_field :answer1 %><br></article>
+<p>
+<br>
+<br>
+2) Which thesis statement has the fewest grammatical mistakes?
+<br>
+<br>
+<article>
+A)  A scientist that is smart can focus their attention on exploring Mars.</article>
+<br>
+<br><article>
+B) Lots of reasons to explore outer space exists, because the possible discovery of aliens mean that we are not alone in the universe.</article>
+<br>
+<br><article>
+C) Looking back on the study of the solar system, Mars will have been the best choice for exploration, as scientists rightfully had recognized.</article>
+<br>
+<br>
+<article>
+ D) Although the findings so far are scarce, the prospects of life on Mars should encourage scientists to explore further, because we can ultimately learn more about life on Earth.</article>
+</p>
+<br>
+<article>
 <%= f.label :answer2 %>
-<%= f.text_field :answer2 %><br />
-
-What's your answer for question 3?
+<%= f.text_field :answer2 %><br></article>
+<p>
+<br>
+<br>
+3) Which thesis statement has the best use of vocabulary? 
+<br>
+<br>
+<article>
+A) Three Dimensional printers are great because they can help people make new things</article>
+<br>
+<br><article>
+B) Dynamic inventors use three dimensional printing as a way to make advances in medical science.</article>
+<br>
+<br><article>
+C) Dynamic inventors are likely to employ three dimensional printers that are revolutionary and are among the vanguard.</article>
+<br>
+<br>
+<article>
+  D) Even though they seem unduly expensive, three dimensional printers represent the next phase of home technology, because the inventions combine ingenuity with practicality.</article>
+ </p> 
+<br>
+<article>
 <%= f.label :answer3 %>
-<%= f.text_field :answer3 %><br />
-
-What's your answer for question 4?
+<%= f.text_field :answer3 %>
+<p>
+<br>
+<br>
+4) Which thesis statement makes a logical argument?
+<br>
+<br>
+<article>
+A) Video games are important to help students learn.</article>
+<br>
+<br><article>
+B) Many people think video games help with problem solving, because this idea is more and more popular every year.</article>
+<br>
+<br><article>
+C) Supposing video games incorporate puzzles or action, they can collaborate with students in making decisions in the course of play by obliging them to use their minds.</article>
+<br>
+<br>
+<article>
+ D) Despite the common belief that video games are a waste of time, role player games can aid in learning, because they invite users to  solve puzzles and to design creative solutions.</article>
+ </p> 
+<br>
+<article>
 <%= f.label :answer4 %>
 <%= f.text_field :answer4 %><br />
-
-<%= f.submit "Go Wild!" %>
+<br>
+</article>
+<%= f.submit "Submit" %>
 
 <% end %>
 

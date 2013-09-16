@@ -1,41 +1,94 @@
-<h1>This is where our survey will go</h1>
+<h1>We Love Feedback</h1>
+
+<h2>How can we create a better Writing Conference?</h2>
 
 <%= form_for @survey do |f| %>
-What's your age?
+<br>
+<br>
+<article>
+1) What is your age?
+
 <%= f.label :age %>
 <%= f.text_field :age %><br />
+</article>
+<br>
+<br>
+<article>
+2) Which best describes your English Language Fluency?
 
-What's your fluency?
+<select>
+  <option value="Native English Speaker">Native English Speaker</option>
+  <option value="Multilingual">Multilingual</option>
+  <option value="English Language Learner">English Language Learner</option>
+</select>
+
 <%= f.label :fluency %>
 <%= f.text_field :fluency %><br />
+</article>
+<br>
+<br>
+<article>
+3) What is the highest degree or level of school you have completed? If currently enrolled, highest degree received.
 
-What's your schooling?
+<select>
+  <option value="No Schooling Completed">No Schooling Completed</option>
+  <option value="Kindergarten-8th Grade">Kindergarten-8th Grade</option>
+  <option value="Some High School, No Diploma">Some High School, No Diploma</option>
+  <option value="High School Graduate Diploma or Equivalent (GED)">High School Graduate Diploma or Equivalent (GED)</option><option value="Some College Credit, No Degree">Some College Credit, No Degree</option><option value="Trade/Technical/Vocational Training">Trade/Technical/Vocational Training</option><option value="Associate Degree">Associate Degree</option><option value="Bachelor's Degree">Bachelor's Degree</option><option value="Master's Degree">Master's Degree</option><option value="Professional Degree">Professional Degree</option>
+</select>
+
 <%= f.label :schooling %>
 <%= f.text_field :schooling %><br />
-
-What's your profession?
+</article>
+<br>
+<br>
+<article>
+4) What is your current profession? If unemployed or a student, please indicate.
 <%= f.label :profession %>
 <%= f.text_field :profession %><br />
+</article>
+<br>
+<br>
+<article>
+5) Would you be interested in receiving more information about The Writing Conference? 
 
-What's your interest?
+<select>
+  <option value="Yes">Yes</option>
+  <option value="No">No</option>
+</select>
 <%= f.label :interest %>
 <%= f.text_field :interest %><br />
-
-What's your goals?
+</article>
+<br>
+<br>
+<article>
+6) What are your writing goals?<br>
 <%= f.label :goals %>
 <%= f.text_field :goals %><br />
-
-What's your writing tasks?
+</article>
+<br>
+<br>
+<article>
+7) What types of writing tasks or assignments do you have to complete for work or school?
+<br>
 <%= f.label :writing_tasks %>
 <%= f.text_field :writing_tasks %><br />
-
-What's your reading topics?
+</article>
+<br>
+<br>
+<article>
+8) What topics do you enjoy reading about?
+<br>
 <%= f.label :reading_topics %>
 <%= f.text_field :reading_topics %><br />
-
-What's your improve?
+</article>
+<br>
+<br>
+<article>
+9) How can we improve The Writing Conference experience? We value all feedback.
+<br>
 <%= f.label :improve %>
 <%= f.text_field :improve %><br />
-
-<%= f.submit "Go Wild!" %>
+</article>
+<%= f.submit "Submit" %>
 <% end %>
