@@ -1,19 +1,77 @@
-<link href="/normalize.css" rel="stylesheet">
-  <style>
-  h1{
+<head>
+  <title>Blazer</title>
+    <style>
+  
+      h1{
   	text-align: center;
-  }
+      }
+  
   .first {
 font-size: 20px
   }
-  p{
 
+  p{
+    text-indent:50px
   }
+  
   article{
-text-indent:50px;
+text-indent:75px;
   	}
 
   </style>
+
+<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+
+
+
+
+
+
+  </head>
+
+
+
+
+     <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Blazer</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><%= link_to('Home', pages_home_path) %></li>
+              <li><%= link_to('About', pages_about_path) %></li>
+              <li><%= link_to('Survey', new_survey_path) %></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form pull-right">
+              <!-- <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password"> -->
+              <button type="submit" class="btn"><%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%></button>
+            </form>
+</div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
  
 	<h1>Welcome to your first Writer's Conference</h1>
 

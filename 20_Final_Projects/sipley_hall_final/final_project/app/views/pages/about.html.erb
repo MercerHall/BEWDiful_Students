@@ -1,33 +1,45 @@
 <!DOCTYPE html>
+
 <head>
-  <link href="/normalize.css" rel="stylesheet">
+  <title>Blazer</title>
   <style>
+
     header {
       text-align: center;
-      background: url('http://img0.etsystatic.com/000/0/6473228/il_570xN.290018622.jpg');
+      background: #333366;
+      background-image: url(<%= asset_path 'blazer.jpg' %>);
       background-size: cover;
       color: white;
     }
+
+    .about {
+      font-size: 125%;
+    }
+
     a {
       color: white;
     }
     h1 {
-      font-size: 70px;
+      font-size: 125px;
       font-family: helvetica;
     }
     img {
       margin: 40px 0px 0px 0px;
-      border: 7px solid white;
-      border-radius: 20px;
+/*      border: 7px solid white;
+      border-radius: 20px;*/
+      size: 100px;
     }
+
     ul {
       padding: 10px;
       background: rgba(0,0,0,0.5);
     }
+
     li {
       display: inline;
       padding: 0px 10px 0px 10px;
     }
+
     article {
       max-width: 500px;
       padding: 20px;
@@ -35,28 +47,85 @@
       font-family: helvetica;
       color: #330033;
     }
-    @media (max-width: 500px) {
+
+@media (max-width: 500px) {
       h1 {
         font-size: 36px;
-      }
-      li {
-        display: block;
         padding: 5px;
       }
+      li {
+        padding: 5px;
+        display: block;
+      }
     }
-  </style>
+
+</style>
 </head>
 <body>
   <header>
-    <img src="/assets/jeff.png">
-    <h1>About Tailor</h1>
-    <ul>
-      <li><a href="http://localhost:3000/pages/home">Home</a></li>
-      <li><a href="http://localhost:3000/diagnostics/new">Diagnostic</a></li>
-      <li><a href="http://localhost:3000/surveys/new">Survey</a></li>
+        <!-- <br>
+          <br> -->
+            <!-- <br>
+              <br> -->
+             <!--    <br> -->
+             <!--      <br>
+                    <br>
+                    <h1>Blazer</h1> -->
+                    <%= image_tag "logo.png" %>
+                     <!--  <br> -->
+                        <br>
+                          <br>
+                           
+   <ul>
+        <li>
+        <%= link_to('Home', pages_home_path) %>
+        &nbsp;  &nbsp; 
+        <%= link_to('Survey', new_survey_path) %>
+        &nbsp; &nbsp; 
+        <%= link_to('Sign In', user_session_path) %>
+        &nbsp;  &nbsp; 
+        <%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%>
+        &nbsp; &nbsp; &nbsp; 
+      </li>
+
+<!-- Sign In</a></li>
+      <li>
+        <%= link_to("logout",destroy_user_session_path(current_user), method: :delete)%>
+      </li> -->
+
     </ul>
   </header>
-  <article>
-  <h2>How do we determine the perfect fit?</h2>
-  <p>This is where we put the about text.</p>
+ <article>
+    <h2>About Blazer</h2>
+<!--   <span class="quote">   -->
+  <em>If writing seems hard, it’s because it is hard. It’s one of the hardest things people do. &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;--William Zinsser<!-- </span> --></em><br>
+<p>
+  <span class="about">
+<br>Blazer is a series of writing conferences that determine the exercises that will best prepare you to think like a writer.<br><br>
+Developed by two teachers who have dedicated their lives to assisting students of all ages and abilities, Blazer helps you find your voice.<br><br>
+
+<button type="submit" class="btn"><%= link_to('Sign Up', new_user_registration_path, style: 'color: blue')%></button>
+</span></p>
   </article>
+
+<footer>
+    <p>&copy; Hall Sipley 2013</p>
+</footer>
+
+<!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

@@ -1,7 +1,90 @@
-<h1>We Love Feedback</h1>
+<!DOCTYPE html>
 
-<h2>How can we create a better Writing Conference?</h2>
+<head>
+  <title>Blazer</title>
+  <style>
 
+    header {
+      text-align: center;
+      background: #333366;
+      background-image: url(<%= asset_path 'blazer.jpg' %>);
+      background-size: cover;
+      color: white;
+    }
+
+    .form{
+    	text-align: center;
+    }
+
+    h2{
+    	text-align: center;
+    	font-size: 200%;
+    }
+   a {
+      color: white;
+    }
+    
+    img {
+      margin: 40px 0px 0px 0px;
+/*      border: 7px solid white;
+      border-radius: 20px;*/
+      size: 100px;
+    }
+
+    ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+    }
+
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+
+  x
+@media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
+
+</style>
+</head>
+<body>
+  <header>
+        <!-- <br>
+          <br> -->
+            <!-- <br>
+              <br> -->
+             <!--    <br> -->
+             <!--      <br>
+                    <br>
+                    <h1>Blazer</h1> -->
+                    <%= image_tag "logo.png" %>
+                     <!--  <br> -->
+                        <br>
+                          <br>
+                           
+   <ul>
+        <li>
+        <%= link_to('Home', pages_home_path) %>
+        &nbsp;  &nbsp; 
+        <%= link_to('About', pages_about_path) %>
+        &nbsp; &nbsp; 
+        <%= link_to('Sign In', user_session_path) %>
+        &nbsp;  &nbsp; 
+        <%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%>
+        &nbsp; &nbsp; &nbsp; 
+      </li>
+</header>
+
+<h2>  Blazer Survey</h2>
+<span class="form">
 <%= form_for @survey do |f| %>
 <br>
 <br>
@@ -64,7 +147,7 @@
 <article>
 6) What are your writing goals?<br>
 <%= f.label :goals %>
-<%= f.text_field :goals %><br />
+<%= f.text_area :goals %><br />
 </article>
 <br>
 <br>
@@ -72,7 +155,7 @@
 7) What types of writing tasks or assignments do you have to complete for work or school?
 <br>
 <%= f.label :writing_tasks %>
-<%= f.text_field :writing_tasks %><br />
+<%= f.text_area :writing_tasks %><br />
 </article>
 <br>
 <br>
@@ -80,15 +163,15 @@
 8) What topics do you enjoy reading about?
 <br>
 <%= f.label :reading_topics %>
-<%= f.text_field :reading_topics %><br />
+<%= f.text_area :reading_topics %><br />
 </article>
 <br>
 <br>
 <article>
-9) How can we improve The Writing Conference experience? We value all feedback.
+9) How can we improve The Writing Conference experience?
 <br>
 <%= f.label :improve %>
-<%= f.text_field :improve %><br />
+<%= f.text_area :improve %><br />
 </article>
 <%= f.submit "Submit" %>
 <% end %>

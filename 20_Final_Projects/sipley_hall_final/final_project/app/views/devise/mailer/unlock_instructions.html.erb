@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <head>
-  <link href="/normalize.css" rel="stylesheet">
+  <h1>Blazer</h1>
+
+<head>
+  <title>Blazer</title>
   <style>
     header {
       text-align: center;
-      background: url('http://img0.etsystatic.com/000/0/6473228/il_570xN.290018622.jpg');
+      background: #333366;
+      background-image: url(<%= asset_path 'blazer.jpg' %>);
       background-size: cover;
       color: white;
     }
+
     a {
       color: white;
     }
     h1 {
-      font-size: 70px;
+      font-size: 125px;
       font-family: helvetica;
     }
     img {
       margin: 40px 0px 0px 0px;
-      border: 7px solid white;
-      border-radius: 20px;
+   /*   border: 7px navy;
+      border-radius: 20px;*/
     }
+
     ul {
       padding: 10px;
       background: rgba(0,0,0,0.5);
     }
+
     li {
       display: inline;
       padding: 0px 10px 0px 10px;
     }
+
     article {
       max-width: 500px;
       padding: 20px;
@@ -35,25 +43,64 @@
       font-family: helvetica;
       color: #330033;
     }
-    @media (max-width: 500px) {
+
+@media (max-width: 500px) {
       h1 {
         font-size: 36px;
-      }
-      li {
-        display: block;
         padding: 5px;
       }
+      li {
+        padding: 5px;
+        display: block;
+      }
     }
+
   </style>
 </head>
 <body>
   <header>
-    <img src="/assets/jeff.png">
-    <h1>Tailor</h1>
+    <!-- <br>
+      <br> -->
+        <!-- <br>
+          <br> -->
+            <br>
+              <br>
+                <br>
+                  <br>
+                    <br>
+                    <h1>Blazer</h1>
+                    <%= image_tag "logo.png" %>
+                      <br>
+                        <br>
+                          <br>
+                            <!-- <br> -->
+                          <!-- <br>
+                            <br> -->
+   <ul>
+      <li>
+        <%= link_to('About', pages_about_path) %>
+        &nbsp;  &nbsp; 
+        <%= link_to('Survey', new_survey_path) %>
+        &nbsp; &nbsp; 
+        <%= link_to('Sign In', user_session_path) %>
+        &nbsp;  &nbsp; 
+        <%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%>
+        &nbsp; &nbsp; &nbsp; 
+      </li>
+    </ul>
+  </header>
+
+
+
+
+  
     <ul>
-      <li><a href="http://localhost:3000/pages/about">About</a></li>
-      <li><a href="http://localhost:3000/diagnostics/new">Diagnostic</a></li>
-      <li><a href="http://localhost:3000/surveys/new">Survey</a></li>
+      <li>
+        <%= link_to('About', pages_about_path) %>
+        <%= link_to('Survey', new_survey_path) %>
+        <%= link_to('Sign In', user_session_path) %>
+        <%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%>
+      </li>
     </ul>
   </header>
 <p>Hello <%= @resource.email %>!</p>
