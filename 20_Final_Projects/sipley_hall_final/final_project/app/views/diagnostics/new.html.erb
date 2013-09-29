@@ -1,176 +1,36 @@
-<head>
-  <title>Blazer</title>
-    <style>
-  
-      h1{
-  	text-align: center;
-      }
-  
-  .first {
-font-size: 20px
-  }
+<h1>Welcome to your first Writer's Conference</h1>
 
-  p{
-    text-indent:50px
-  }
-  
-  article{
-text-indent:75px;
-  	}
-
-  </style>
-
-<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
-
-
-
-
-
-
-  </head>
-
-
-
-
-     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">Blazer</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li><%= link_to('Home', pages_home_path) %></li>
-              <li><%= link_to('About', pages_about_path) %></li>
-              <li><%= link_to('Survey', new_survey_path) %></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="navbar-form pull-right">
-              <!-- <input class="span2" type="text" placeholder="Email">
-              <input class="span2" type="password" placeholder="Password"> -->
-              <button type="submit" class="btn"><%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%></button>
-            </form>
-</div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-
- 
-	<h1>Welcome to your first Writer's Conference</h1>
-
-	<br><b><span class="first">Directions: Read each question and type the letter of the answer in the answer field.</span></b><br><br> 
+	<br><b><span class="first">Directions: To help us determine your unique writing style, select the answer that best matches your voice.</span></b><br><br> 
 
 
 <%= form_for @diagnostic do |f| %>
-<p>
-1) Which thesis statement do you like the best?
+
+<h3> 1) Which thesis statement do you like the best?</h3>
+<div>
+<%= f.radio_button :answer1, 1 %> A) Fantasy football is a way for fans to create their own teams. </br>
+<%= f.radio_button :answer1, 2 %> B) Fans create their own fantasy football teams because they want to make their own teams of players. </br>
+<%= f.radio_button :answer1, 3 %> C) Although fantasy football is a growing trend, many believe that the practice obscures the power of great coaching. </br>
+<%= f.radio_button :answer1, 4 %> D) Even though fantasy football is a popular pastime, its popularity will only continue to increase because fans enjoy the opportunity to create their own unique teams.</div></br>
+
+<h3> 2) Which thesis statement has the fewest grammatical mistakes?</h3>
+<%= f.radio_button :answer2, 1 %> A)  A scientist that is smart can focus their attention on exploring Mars. </br>
+<%= f.radio_button :answer2, 2 %> B)  Lots of reasons to explore outer space exists, because the possible discovery of aliens mean that we are not alone in the universe. </br>
+<%= f.radio_button :answer2, 3 %> C) Looking back on the study of the solar system, Mars will have been the best choice for exploration, as scientists rightfully had recognized. </br>
+<%= f.radio_button :answer2, 4 %> D) Although the findings so far are scarce, the prospects of life on Mars should encourage scientists to explore further, because we can ultimately learn more about life on Earth. </br>
+
+<h3> 3) Which thesis statement has the best use of vocabulary? </h3>
+<%= f.radio_button :answer3, 1 %> A) Three Dimensional printers are great because they can help people make new things </br>
+<%= f.radio_button :answer3, 2 %> B) Dynamic inventors use three dimensional printing as a way to make advances in medical science. </br>
+<%= f.radio_button :answer3, 3 %> C) Dynamic inventors are likely to employ three dimensional printers that are revolutionary and are among the vanguard.</br>
+<%= f.radio_button :answer3, 4 %>  D) Even though they seem unduly expensive, three dimensional printers represent the next phase of home technology, because the inventions combine ingenuity with practicality.</br>
+
+<h3> 4) Which thesis statement makes a logical argument?</h3>
+<%= f.radio_button :answer4, 1 %> A) Video games are important to help students learn. </br>
+<%= f.radio_button :answer4, 2 %>  B) Many people think video games help with problem solving, because this idea is more and more popular every year. </br>
+<%= f.radio_button :answer4, 3 %>  C) Supposing video games incorporate puzzles or action, they can collaborate with students in making decisions in the course of play by obliging them to use their minds. </br>
+<%= f.radio_button :answer4, 4 %> D) Despite the common belief that video games are a waste of time, role player games can aid in learning, because they invite users to  solve puzzles and to design creative solutions.  </br>
 <br>
 <br>
-<article>
-A) Fantasy football is a way for fans to create their own teams.</article>
-<br>
-<br><article>
-B) Fans create their own fantasy football teams because they want to make their own teams of players.</article>
-<br>
-<br><article>
-C) Although fantasy football is a growing trend, many believe that the practice obscures the power of great coaching.</article>
-<br>
-<br>
-<article>
- D) Even though fantasy football is a popular pastime, its popularity will only continue to increase because fans enjoy the opportunity to create their own unique teams.</article>
- </p> 
-<br>
-<article>
-<%= f.label :answer1 %>
-<%= f.text_field :answer1 %><br></article>
-<p>
-<br>
-<br>
-2) Which thesis statement has the fewest grammatical mistakes?
-<br>
-<br>
-<article>
-A)  A scientist that is smart can focus their attention on exploring Mars.</article>
-<br>
-<br><article>
-B) Lots of reasons to explore outer space exists, because the possible discovery of aliens mean that we are not alone in the universe.</article>
-<br>
-<br><article>
-C) Looking back on the study of the solar system, Mars will have been the best choice for exploration, as scientists rightfully had recognized.</article>
-<br>
-<br>
-<article>
- D) Although the findings so far are scarce, the prospects of life on Mars should encourage scientists to explore further, because we can ultimately learn more about life on Earth.</article>
-</p>
-<br>
-<article>
-<%= f.label :answer2 %>
-<%= f.text_field :answer2 %><br></article>
-<p>
-<br>
-<br>
-3) Which thesis statement has the best use of vocabulary? 
-<br>
-<br>
-<article>
-A) Three Dimensional printers are great because they can help people make new things</article>
-<br>
-<br><article>
-B) Dynamic inventors use three dimensional printing as a way to make advances in medical science.</article>
-<br>
-<br><article>
-C) Dynamic inventors are likely to employ three dimensional printers that are revolutionary and are among the vanguard.</article>
-<br>
-<br>
-<article>
-  D) Even though they seem unduly expensive, three dimensional printers represent the next phase of home technology, because the inventions combine ingenuity with practicality.</article>
- </p> 
-<br>
-<article>
-<%= f.label :answer3 %>
-<%= f.text_field :answer3 %>
-<p>
-<br>
-<br>
-4) Which thesis statement makes a logical argument?
-<br>
-<br>
-<article>
-A) Video games are important to help students learn.</article>
-<br>
-<br><article>
-B) Many people think video games help with problem solving, because this idea is more and more popular every year.</article>
-<br>
-<br><article>
-C) Supposing video games incorporate puzzles or action, they can collaborate with students in making decisions in the course of play by obliging them to use their minds.</article>
-<br>
-<br>
-<article>
- D) Despite the common belief that video games are a waste of time, role player games can aid in learning, because they invite users to  solve puzzles and to design creative solutions.</article>
- </p> 
-<br>
-<article>
-<%= f.label :answer4 %>
-<%= f.text_field :answer4 %><br />
-<br>
-</article>
 <%= f.submit "Submit" %>
 
 <% end %>

@@ -73,7 +73,7 @@
                             <!-- <br> -->
                           <!-- <br>
                             <br> -->
-   <ul>
+  <!--  <ul>
       <li>
         <%= link_to('About', pages_about_path) %>
         &nbsp;  &nbsp; 
@@ -85,10 +85,14 @@
         &nbsp; &nbsp; &nbsp; 
       </li>
     </ul>
-  </header>
+ -->  </header>
   <article>
   <h2>Become A Better Writer</h2>
-  <p>Whether you are writing a paper for school or a report for work, we can help you to write clear, logical, and dynamic prose.</p> <p>Let's meet for a writer's conference.</p><%= link_to('Sign Up', new_user_registration_path, style:'color:blue;') %> </article>
+  <p>Whether you are writing a paper for school or a report for work, we can help you to write clear, logical, and dynamic prose.</p> <p>Let's meet for a writer's conference.</p>
+<button type="submit" class="btn"><%= link_to('Sign Up', new_user_registration_path, style: 'color: blue')%></button>
+
+
+<!--   <%= link_to('Sign Up', new_user_registration_path, style:'color:blue;') %> --> </article>
 
   <footer>
         <p>&copy; Hall Sipley 2013</p>

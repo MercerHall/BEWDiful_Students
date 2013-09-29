@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130913205037) do
+ActiveRecord::Schema.define(version: 20130928235307) do
 
   create_table "diagnostics", force: true do |t|
     t.string   "user_id"
     t.string   "writer_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "answer1"
-    t.string   "answer2"
-    t.string   "answer3"
-    t.string   "answer4"
+    t.integer  "answer1",     limit: 255
+    t.integer  "answer2",     limit: 255
+    t.integer  "answer3",     limit: 255
+    t.integer  "answer4",     limit: 255
   end
 
   create_table "surveys", force: true do |t|

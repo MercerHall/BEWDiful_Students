@@ -9,8 +9,13 @@ FinalProject::Application.routes.draw do
   get 'pages/home'
   get 'pages/about' 
   get 'about', to: 'pages#about'
+  get 'pages/continue'
+  get 'continue', to: 'pages#continue'
   resources :users
-  resources :diagnostics
+  resources :diagnostics do
+    collection {get :ricky, :madison, :daniel, :theodora}
+    end
+
   resources :surveys
   resources :writer_types
 

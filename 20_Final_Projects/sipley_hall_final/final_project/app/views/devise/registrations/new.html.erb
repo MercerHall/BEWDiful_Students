@@ -1,125 +1,43 @@
-<h1>Blazer</h1>
-
 <head>
-  <title>Blazer</title>
   <style>
-    header {
-      text-align: center;
-      background: #333366;
-      background-image: url(<%= asset_path 'blazer.jpg' %>);
-      background-size: cover;
-      color: white;
-    }
 
-    a {
-      color: white;
-    }
-    h1 {
-      font-size: 125px;
-      font-family: helvetica;
-    }
-    img {
-      margin: 40px 0px 0px 0px;
-   /*   border: 7px navy;
-      border-radius: 20px;*/
-    }
+body {
+  background-image: url(<%= asset_path 'blazer.jpg' %>)
+}
 
-    ul {
-      padding: 10px;
-      background: rgba(0,0,0,0.5);
-    }
-
-    li {
-      display: inline;
-      padding: 0px 10px 0px 10px;
-    }
-
-    article {
-      max-width: 500px;
-      padding: 20px;
-      margin: 0px auto;
-      font-family: helvetica;
-      color: #330033;
-    }
-
-@media (max-width: 500px) {
-      h1 {
-        font-size: 36px;
-        padding: 5px;
-      }
-      li {
-        padding: 5px;
-        display: block;
-      }
-    }
-
+div {
+  color: white;
+}
   </style>
-</head>
-<body>
-  <header>
-    <!-- <br>
-      <br> -->
-        <!-- <br>
-          <br> -->
-            <br>
-              <br>
-                <br>
-                  <br>
-                    <br>
-                    <h1>Blazer</h1>
-                    <%= image_tag "logo.png" %>
-                      <br>
-                        <br>
-                          <br>
-                            <!-- <br> -->
-                          <!-- <br>
-                            <br> -->
-   <ul>
-      <li>
-        <%= link_to('About', pages_about_path) %>
-        &nbsp;  &nbsp; 
-        <%= link_to('Survey', new_survey_path) %>
-        &nbsp; &nbsp; 
-        <%= link_to('Sign In', user_session_path) %>
-        &nbsp;  &nbsp; 
-        <%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%>
-        &nbsp; &nbsp; &nbsp; 
-      </li>
-    </ul>
-  </header>
+</head> 
 
+<div align="center"><h2>Blazer Sign up</h2>
+</div>
 
-
-
-    <ul>
-      <li>
-        <%= link_to('About', pages_about_path) %>
-        <%= link_to('Survey', new_survey_path) %>
-        <%= link_to('Sign In', user_session_path) %>
-        <%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%>
-      </li>
-    </ul>
-  </header><h2>Sign up</h2>
-
+<div align="center">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= devise_error_messages! %> </div>
 
-  <div><%= f.label :first_name %><br />
+  <div align="center"><%= f.label :first_name %><br />
   <%= f.text_field :first_name %></div>
 
-   <div><%= f.label :last_name %><br />
+   <div align="center"><%= f.label :last_name %><br />
   <%= f.text_field :last_name %></div>
 
-  <div><%= f.label :email %><br />
+  <div align="center"><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password %><br />
+  <div align="center"><%= f.label :password %><br />
   <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div align="center"><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+  <div align="center"><%= f.submit "Sign up" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</body>
+</html>
+

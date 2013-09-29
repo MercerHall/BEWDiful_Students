@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<h1>Blazer</h1>
-    <ul>
-      <li>
-        <%= link_to('About', pages_about_path) %>
-        <%= link_to('Survey', new_survey_path) %>
-        <%= link_to('Sign In', user_session_path) %>
-        <%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%>
-      </li>
-    </ul>
-  </header>
+<head>
+  <style>
+
+body {
+  background-image: url(<%= asset_path 'blazer.jpg' %>)
+}
+
+div {
+  color: white;
+}
+  </style>
+</head>
+<div align="center">
 <h2>Change your password</h2>
 
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>

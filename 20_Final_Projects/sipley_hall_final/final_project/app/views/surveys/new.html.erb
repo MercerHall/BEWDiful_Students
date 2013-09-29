@@ -11,9 +11,13 @@
       background-size: cover;
       color: white;
     }
+/*
+    article {
+      margin: 5%;
+    }*/
 
     .form{
-    	text-align: center;
+    	/*text-align: center;*/
     }
 
     h2{
@@ -70,7 +74,7 @@
                         <br>
                           <br>
                            
-   <ul>
+  <!--  <ul>
         <li>
         <%= link_to('Home', pages_home_path) %>
         &nbsp;  &nbsp; 
@@ -80,7 +84,7 @@
         &nbsp;  &nbsp; 
         <%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%>
         &nbsp; &nbsp; &nbsp; 
-      </li>
+      </li> -->
 </header>
 
 <h2>  Blazer Survey</h2>
@@ -89,64 +93,93 @@
 <br>
 <br>
 <article>
-1) What is your age?
+1) What is your age?<br>
 
-<%= f.label :age %>
+<!-- <%= f.label :age %> -->
+
 <%= f.text_field :age %><br />
 </article>
 <br>
 <br>
 <article>
-2) Which best describes your English Language Fluency?
+2) Which best describes your English Language Fluency?<br><br>
 
-<select>
-  <option value="Native English Speaker">Native English Speaker</option>
+
+<%= f.radio_button :fluency, 1 %> Native English Speaker <br>
+
+<%= f.radio_button :fluency, 2 %> Multilingual <br>
+
+<%= f.radio_button :fluency, 3 %> English Language Learner <br>
+ <!--  <option value="Native English Speaker">Native English Speaker</option>
   <option value="Multilingual">Multilingual</option>
-  <option value="English Language Learner">English Language Learner</option>
-</select>
+  <option value="English Language Learner">English Language Learner</option> -->
 
-<%= f.label :fluency %>
-<%= f.text_field :fluency %><br />
+
+<!-- <%= f.label :fluency %> -->
+
+
+<!--<%= f.text_field :fluency %><br /> -->
+
 </article>
 <br>
 <br>
 <article>
-3) What is the highest degree or level of school you have completed? If currently enrolled, highest degree received.
+3) What is the highest degree or level of school you have completed? If currently enrolled, highest degree received.<br><br>
 
-<select>
-  <option value="No Schooling Completed">No Schooling Completed</option>
+
+<%= f.radio_button :schooling, 1 %> No Schooling Completed <br>
+
+<%= f.radio_button :schooling, 2 %> Kindergarten-8th Grade <br>
+
+<%= f.radio_button :schooling, 3 %> Some High School, No Diploma <br>
+
+<%= f.radio_button :schooling, 4 %> High School Graduate Diploma or Equivalent (GED) <br>
+
+<%= f.radio_button :schooling, 5 %> Some College Credit, No Degree <br>
+
+<%= f.radio_button :schooling, 6 %> Trade/Technical/Vocational Training <br>
+
+<%= f.radio_button :schooling, 7 %> Associate Degree <br>
+
+<%= f.radio_button :schooling, 8 %> Bachelor's Degree <br>
+
+<%= f.radio_button :schooling, 9 %> Master's Degree <br>
+
+<%= f.radio_button :schooling, 10 %> Professional Degree <br>
+
+  <!-- <option value="No Schooling Completed">No Schooling Completed</option>
   <option value="Kindergarten-8th Grade">Kindergarten-8th Grade</option>
   <option value="Some High School, No Diploma">Some High School, No Diploma</option>
   <option value="High School Graduate Diploma or Equivalent (GED)">High School Graduate Diploma or Equivalent (GED)</option><option value="Some College Credit, No Degree">Some College Credit, No Degree</option><option value="Trade/Technical/Vocational Training">Trade/Technical/Vocational Training</option><option value="Associate Degree">Associate Degree</option><option value="Bachelor's Degree">Bachelor's Degree</option><option value="Master's Degree">Master's Degree</option><option value="Professional Degree">Professional Degree</option>
-</select>
+ -->
 
-<%= f.label :schooling %>
-<%= f.text_field :schooling %><br />
+<!-- <%= f.label :schooling %> -->
+<!-- <%= f.text_field :schooling %><br />-->
 </article>
 <br>
 <br>
 <article>
-4) What is your current profession? If unemployed or a student, please indicate.
-<%= f.label :profession %>
-<%= f.text_field :profession %><br />
+4) What is your current profession? If unemployed or a student, please indicate.<br>
+
+ <%= f.text_field :profession %><br /> 
 </article>
 <br>
 <br>
 <article>
-5) Would you be interested in receiving more information about The Writing Conference? 
+5) Would you be interested in receiving more information about The Writing Conference? <br><br>
 
-<select>
-  <option value="Yes">Yes</option>
-  <option value="No">No</option>
-</select>
-<%= f.label :interest %>
-<%= f.text_field :interest %><br />
+<%= f.radio_button :interest, 1 %> Yes <br>
+ <%= f.radio_button :interest, 2 %> No <br>
+
+<!-- <%= f.label :interest %> -->
+<!--<%= f.text_field :interest %><br />-->
+
 </article>
 <br>
 <br>
 <article>
 6) What are your writing goals?<br>
-<%= f.label :goals %>
+<!-- <%= f.label :goals %> -->
 <%= f.text_area :goals %><br />
 </article>
 <br>
@@ -154,7 +187,7 @@
 <article>
 7) What types of writing tasks or assignments do you have to complete for work or school?
 <br>
-<%= f.label :writing_tasks %>
+<!-- <%= f.label :writing_tasks %> -->
 <%= f.text_area :writing_tasks %><br />
 </article>
 <br>
@@ -162,7 +195,7 @@
 <article>
 8) What topics do you enjoy reading about?
 <br>
-<%= f.label :reading_topics %>
+<!-- <%= f.label :reading_topics %> -->
 <%= f.text_area :reading_topics %><br />
 </article>
 <br>
@@ -170,8 +203,15 @@
 <article>
 9) How can we improve The Writing Conference experience?
 <br>
-<%= f.label :improve %>
+<!-- <%= f.label :improve %> -->
 <%= f.text_area :improve %><br />
 </article>
-<%= f.submit "Submit" %>
+
+<p><a class="btn btn-primary btn-large"<%= link_to('Submit', pages_continue_path) %> </a></p>
+<!-- 
+<%= f.submit "Submit" %> -->
 <% end %>
+
+<footer>
+    <p>&copy; Hall Sipley 2013</p>
+</footer>

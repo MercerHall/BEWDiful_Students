@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: diagnostics
+#
+#  id          :integer          not null, primary key
+#  user_id     :string(255)
+#  writer_type :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#  answer1     :integer
+#  answer2     :integer
+#  answer3     :integer
+#  answer4     :integer
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:

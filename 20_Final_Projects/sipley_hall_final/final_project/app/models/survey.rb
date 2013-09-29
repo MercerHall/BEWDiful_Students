@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: surveys
+#
+#  id             :integer          not null, primary key
+#  age            :string(255)
+#  fluency        :string(255)
+#  schooling      :string(255)
+#  profession     :string(255)
+#  interest       :string(255)
+#  goals          :text
+#  writing_tasks  :string(255)
+#  reading_topics :string(255)
+#  improve        :text
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+
 class Survey < ActiveRecord::Base
 	# validates :user_id, presence: true
 	belongs_to :users

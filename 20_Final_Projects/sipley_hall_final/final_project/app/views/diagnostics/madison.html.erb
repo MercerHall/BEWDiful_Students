@@ -41,21 +41,7 @@
 
 
 
-
-     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">Blazer</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li><%= link_to('Home', pages_home_path) %></li>
-              <li><%= link_to('About', pages_about_path) %></li>
-              <li><%= link_to('Survey', new_survey_path) %></li>
+<!-- Please overide -->
 			
              <!--  <li class="dropdown"> -->
                 <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -73,7 +59,7 @@
             <form class="navbar-form pull-right">
               <!-- <input class="span2" type="text" placeholder="Email">
               <input class="span2" type="password" placeholder="Password"> -->
-              <button type="submit" class="btn"><%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%></button>
+           <!--    <button type="submit" class="btn"><%= link_to("Logout",destroy_user_session_path(current_user), method: :delete)%></button> -->
             </form>
 </div><!--/.nav-collapse -->
         </div>
@@ -85,9 +71,8 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1><%= image_tag "madison.png" %></h1>
-        <p>Based on your responses to the writing diagnostic questions, you appear to favor compound sentences with a natural, conversational voice. You seem to prefer a varied length to your sentences, and you often incorporate strong vivid verbs and attempts at supporting evidence. At times, you display errors in subject-verb agreement, and your sentence fluency occasionally yields run-on statements.<br>Your Personal Measurements: Based on your personal writer profile, we would recommend practice exercises that focus on adding specific nouns to your vocabulary choices. We would also suggest techniques toward using more precise evidence and non-tautological logic in decoding arguments and in substantiating claims. These areas of review will help expand your compound sentences into compound-complex thesis statements.
-.</p>
-        <p><a href="#" class="btn btn-primary btn-large">Continue &raquo;</a></p>
+        <p><br>Based on your responses to the writing diagnostic questions, you appear to favor compound sentences with a natural, conversational voice. You seem to prefer a varied length to your sentences, and you often incorporate strong vivid verbs and attempts at supporting evidence. At times, you display errors in subject-verb agreement, and your sentence fluency occasionally yields run-on statements.<br><br>Based on your personal writer profile, we would recommend practice exercises that focus on adding specific nouns to your vocabulary choices. We would also suggest techniques toward using more precise evidence and non-tautological logic in decoding arguments and in substantiating claims. These areas of review will help expand your compound sentences into compound-complex thesis statements.</p>
+        <p><a class="btn btn-primary btn-large"<%= link_to('Continue', new_survey_path) %> </a></p>
       </div>
 
      
